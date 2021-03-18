@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "lichess-analysis-tools"
+version = "0.1.0"
+description = "Various tools to analyse stats on Lichess"
+authors = ["Sigve Indregard <sigve@indregard.no>"]
+license = "MIT"
+packages = [
+  { include = 'lichess' }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.5.0,<4.0"
+requests = "^2.23.0"
+tqdm = "^4.59.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+lichess_fetch_games = 'lichess.fetch_games:main'
